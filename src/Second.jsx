@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { Canvas } from '@react-three/fiber'
+import React from 'react'
+import { OrbitControls } from '@react-three/drei'
+import MacContainer from './MacContainer'
 
-const Second = () => {
-  const [isLoaded, setisLoaded] = useState(false);
-
-  useEffect(() => {
-    setisLoaded(true);
-  }, []);
-
+const Second = ({isDark}) => {
   return (
-    <div
-      className={`flex flex-col justify-center items-center h-screen w-full font-sans uppercase gap-5 text-white transition-all duration-4000 ${
-        isLoaded ? "opacity-100" : "opacity-0"
-      }`}
-    ></div>
-  );
-};
+    <div className='h-screen w-full flex justify-center items-center'>
+      <MacContainer />
+    </div>
+  )
+}
 
 export default Second;

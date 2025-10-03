@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const First = ({isDark}) => {
+const First = ({ isDark }) => {
   const [isLoaded, setisLoaded] = useState(false);
 
   useEffect(() => {
@@ -8,7 +8,11 @@ const First = ({isDark}) => {
   }, []);
 
   return (
-    <div className={`flex flex-col justify-center items-center h-screen w-full font-sans gap-10 ${isDark ? 'text-white' : 'text-black'} m-5 p-3`}>
+    <div
+      className={`flex flex-col justify-center items-center h-screen w-full font-sans gap-10 ${
+        isDark ? "text-white" : "text-black"
+      } m-5 p-3`}
+    >
       <div
         className={`absolute top-[25%] transition-all duration-4000 ${
           isLoaded ? "opacity-100" : "opacity-0"
@@ -24,11 +28,13 @@ const First = ({isDark}) => {
       <div
         className={`absolute bottom-7 w-80 max-h-80  p-6 m-10 text-zinc-400 overflow-scroll no-scrollbar transition-all duration-1000 ${
           isLoaded ? "opacity-100" : "opacity-0 "
-        }`}
+        }
+        `}
       >
-        <div className="animate-scroll">
+        <div
+          className={`animate-scroll ${isDark ? "text-white" : "text-black"}`}
+        >
           <p className="mb-6">
-            {" "}
             I am a passionate and motivated developer eager to start my
             professional journey in the tech industry. With a strong foundation
             in JavaScript, React, and modern web development practices, I enjoy
@@ -39,8 +45,7 @@ const First = ({isDark}) => {
             I am excited to contribute to real-world projects, collaborate with
             teams, and continuously grow as a developer.
           </p>
-          <p className="mb-6">
-            {" "}
+          <p>
             I am a passionate and motivated developer eager to start my
             professional journey in the tech industry. With a strong foundation
             in JavaScript, React, and modern web development practices, I enjoy

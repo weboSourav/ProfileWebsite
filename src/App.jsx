@@ -13,9 +13,13 @@ const toggleTheme = () => {
   return (
     <div className={`text-white bg-cover bg-opacity-[-100] bg-center min-h-screen w-full transition-colors duration-500 ${isDark ? 'bg-black' : 'bg-white'}`}>
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+     
       <First isDark={isDark} />
       <Second isDark={isDark} />
-    </div>
+
+</div>
+
+
   );
 }
 export default App;
