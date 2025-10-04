@@ -3,6 +3,7 @@ import First from "./First";
 import Second from "./Second";
 import Navbar from "./Navbar";
 import { useState } from "react";
+import Third from "./Third";
 function App() {
   const [isDark,setisDark] = useState(true);
 
@@ -16,6 +17,7 @@ const toggleTheme = () => {
      
       <First isDark={isDark} />
       <Second isDark={isDark} />
+      <Third isDark={isDark}/>
 
 </div>
 
